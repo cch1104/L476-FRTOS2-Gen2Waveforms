@@ -22,7 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+int cnt_1=9;
+int cnt_2=9;
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -221,7 +222,11 @@ void StartTask01(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    if(cnt_1 >=9)
+    	cnt_1=0;
+    else
+    	cnt_1++;
+    osDelay(100);
   }
   /* USER CODE END 5 */
 }
@@ -239,7 +244,11 @@ void StartTask02(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  if(cnt_2 >=9)
+		cnt_2=0;
+	  else
+		cnt_2++;
+	  osDelay(250);
   }
   /* USER CODE END StartTask02 */
 }
